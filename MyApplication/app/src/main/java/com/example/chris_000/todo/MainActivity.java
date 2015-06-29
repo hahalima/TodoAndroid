@@ -25,23 +25,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //what is the R?
-        lvItems = (ListView) findViewById(R.id.lvItems);
-        items = new ArrayList<String>();
-        itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
-        lvItems.setAdapter(itemsAdapter);
-        items.add("First Item");
-        items.add("Second Item");
-        setupListViewListener();
+//        //what is the R?
+//        lvItems = (ListView) findViewById(R.id.lvItems);
+//        items = new ArrayList<String>();
+//        itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+//        lvItems.setAdapter(itemsAdapter);
+//        items.add("First Item");
+//        items.add("Second Item");
+//        setupListViewListener();
     }
 
-    public void onAddItem(View v) {
-        //what is findViewById(R.id.etNewItem)
-        EditText etNewItem = (EditText) findViewById(R.id.etNewItem);
-        String itemText = etNewItem.getText().toString();
-        itemsAdapter.add(itemText);
-        etNewItem.setText("");
-    }
+//    public void onAddItem(View v) {
+//        //what is findViewById(R.id.etNewItem)
+//        EditText etNewItem = (EditText) findViewById(R.id.etNewItem);
+//        String itemText = etNewItem.getText().toString();
+//        itemsAdapter.add(itemText);
+//        etNewItem.setText("");
+//    }
 
     public void setupListViewListener() {
         lvItems.setOnItemLongClickListener( new AdapterView.OnItemLongClickListener() {
